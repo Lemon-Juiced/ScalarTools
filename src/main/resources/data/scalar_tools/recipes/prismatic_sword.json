@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "#I#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "I": {
+      "item": "minecraft:iron_sword"
+    }
+  },
+  "result": {
+    "item": "scalar_tools:prismatic_sword",
+    "count": 1
+  }
+}
