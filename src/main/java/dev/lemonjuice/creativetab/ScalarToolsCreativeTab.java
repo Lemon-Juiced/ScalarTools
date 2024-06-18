@@ -21,6 +21,7 @@ public class ScalarToolsCreativeTab {
 
     public static void registerTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == SCALAR_TOOLS_TAB.get()) {
+            event.accept(ScalarToolsItems.HALITOSIS_SWORD.get());
             event.accept(ScalarToolsItems.PRISMATIC_SWORD.get());
             event.accept(ScalarToolsItems.WITHER_IMBUED_SWORD.get());
         }

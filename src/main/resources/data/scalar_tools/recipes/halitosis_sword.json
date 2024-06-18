@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "#I#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dragon_breath"
+    },
+    "I": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "item": "scalar_tools:halitosis_sword",
+    "count": 1
+  }
+}
