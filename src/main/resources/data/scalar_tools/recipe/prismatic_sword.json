@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:dragon_breath"
+      "item": "minecraft:prismarine_shard"
     },
     "I": {
-      "item": "minecraft:netherite_sword"
+      "item": "minecraft:iron_sword"
     }
   },
   "result": {
-    "item": "scalar_tools:halitosis_sword",
+    "id": "scalar_tools:prismatic_sword",
     "count": 1
   }
 }

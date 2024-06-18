@@ -6,9 +6,10 @@
   "item.scalar_tools.wither_imbued_sword": "Wither Imbued Sword",
 
   "tooltip.scalar_tools.halitosis_sword": "Allows the user to swap between an off-mode, a fire-mode, and poison-mode, when right-clicked.",
-  "tooltip.scalar_tools.halitosis_sword.current_mode_fire": "Current Mode: Fire",
-  "tooltip.scalar_tools.halitosis_sword.current_mode_off": "Current Mode: Off",
-  "tooltip.scalar_tools.halitosis_sword.current_mode_poison": "Current Mode: Poison",
+  "tooltip.scalar_tools.halitosis_sword.current_mode": "Current Mode: ",
+  "tooltip.scalar_tools.halitosis_sword.current_mode_fire": "Fire",
+  "tooltip.scalar_tools.halitosis_sword.current_mode_off": "Off",
+  "tooltip.scalar_tools.halitosis_sword.current_mode_poison": "Poison",
   "tooltip.scalar_tools.prismatic_sword": "Allows the user to breathe underwater, for five seconds, when right-clicked.",
   "tooltip.scalar_tools.wither_imbued_sword": "Allows the user wither their enemies, for five seconds, when attacked."
 }

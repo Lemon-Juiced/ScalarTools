@@ -1,6 +1,9 @@
 package dev.lemonjuice.item.sword;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -30,9 +33,20 @@ public class HalitosisSwordItem extends AbstractBaseSwordItem {
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext tooltipContext, List<Component> components, TooltipFlag tooltipFlag) {
         components.add(Component.translatable("tooltip.scalar_tools.halitosis_sword"));
-        if(currentMode.equals("off")) components.add(Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_off"));
-        else if(currentMode.equals("fire")) components.add(Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_fire"));
-        else components.add(Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_poison"));
+
+        // This is a stupid way to do this, but it seems that this is the only way it will work.
+        Component modeComponent = Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode");
+        Component offComponent = Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_off").withStyle(ChatFormatting.YELLOW);
+        Component fireComponent = Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_fire").withStyle(ChatFormatting.RED);
+        Component poisonComponent = Component.translatable("tooltip.scalar_tools.halitosis_sword.current_mode_poison").withStyle(ChatFormatting.GREEN);
+
+        Component offModeComponent = modeComponent.copy().append(offComponent);
+        Component fireModeComponent = modeComponent.copy().append(fireComponent);
+        Component poisonModeComponent = modeComponent.copy().append(poisonComponent);
+
+        if (currentMode.equals("off")) components.add(offModeComponent);
+        else if (currentMode.equals("fire")) components.add(fireModeComponent);
+        else components.add(poisonModeComponent);
     }
 
     /**
@@ -48,6 +62,7 @@ public class HalitosisSwordItem extends AbstractBaseSwordItem {
         if(currentMode.equals("fire")) currentMode = "poison";
         else if(currentMode.equals("off")) currentMode = "fire";
         else currentMode = "off";
+        level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.EXPERIENCE_ORB_PICKUP, player.getSoundSource(), 1.0f, 1.0f);
         return super.use(level, player, interactionHand);
     }
 

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "pattern": [
     "# #",
     "#I#",
@@ -7,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:prismarine_shard"
+      "item": "minecraft:dragon_breath"
     },
     "I": {
-      "item": "minecraft:iron_sword"
+      "item": "minecraft:netherite_sword"
     }
   },
   "result": {
-    "item": "scalar_tools:prismatic_sword",
+    "id": "scalar_tools:halitosis_sword",
     "count": 1
   }
 }
